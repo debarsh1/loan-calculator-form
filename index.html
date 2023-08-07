@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loan Calculator</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h2>Loan Calculator</h2>
+        <form id="loanForm">
+          <label for="propertyType">Property Type</label>
+          <select id="propertyType" name="propertyType">
+            <option value="Multifamily">Multifamily</option>
+            <option value="Office">Office</option>
+            <option value="Retail">Retail</option>
+            <option value="Industrial">Industrial</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Hospitality">Hospitality</option>
+            <option value="Special Use">Special Use</option>
+          </select>
+          
+          <label for="loanPurpose">Loan Purpose</label>
+          <select id="loanPurpose" name="loanPurpose">
+            <option value="Refinance">Refinance</option>
+        <option value="Acquisition">Acquisition</option>
+        <option value="Ref-Cash-out">Ref-Cash-out</option>
+        <option value="Rehab">Rehab</option>
+        <option value="Construction">Construction</option>
+          </select>
+          
+          <label for="propertyValue">Property Value ($$$)</label>
+          <input type="range" id="propertyValue" name="propertyValue" min="1000000" max="100000000" step="1000000">
+          <span id="propertyValueLabel">$1,000,000</span>
+          
+          <label for="loanToValue">Desired Loan to Value (LTV) %</label>
+          <input type="range" id="loanToValue" name="loanToValue" min="0" max="100" step="1">
+          <span id="loanToValueLabel">0%</span>
+          
+          <label for="state">State</label>
+          <select id="state" name="state">
+            <!-- Options for states -->
+          </select>
+          
+          <label for="equityType">Equity Type</label>
+          <select id="equityType" name="equityType">
+            <option value="Recapitalize Equity">Recapitalize Equity</option>
+        <option value="Buyout of Partner">Buyout of Partner</option>
+        <option value="Refi Mezzanine Debt">Refi Mezzanine Debt</option>
+          </select>
+          
+          <button type="button" id="calculateBtn">Calculate Loan Amount</button>
+          <p id="loanAmountResult"></p>
+        </form>
+      </div>
+
+      <script src="script.js"></script>
+</body>
+</html>
